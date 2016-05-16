@@ -96,7 +96,7 @@ body {
     top: 50% !important;
     left: 50%;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
-    z-index: 99999999;
+    z-index: 999;
     background: white;
     perspective: 100px;
     position: fixed;
@@ -104,6 +104,17 @@ body {
     margin-top: 0px;
     background-size: cover;
 }
+
+.individual-page {
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+}
+
+.hidden{
+    display: none;
+}
+
 
 .box-shadow-hide{
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
@@ -186,4 +197,20 @@ body {
 #p15.page {
     top: 2150px;
     background-image: url('../img/dracula FINAL-15.jpg');
+}
+/* ==================================================== */
+/* Text Styling */
+/* ==================================================== */
+
+.large-text {
+    font-size: 78px;
+    text-align: center;
+    margin-top: 253px;
+    letter-spacing: 1px;
+}
+
+#author {
+    font-size: 34px;
+    text-align: center;
+    margin-top: 793px;
 }

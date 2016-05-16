@@ -26,17 +26,44 @@ function prefixedTransform(el, val) {
     el.style.transform = val;
 }
 
-jQuery('.page').on('click touchstart', function(element, index) {
+jQuery('.page').on('click', function(element, index) {
     console.log(this.id);
     jQuery(this).addClass("activated");
+jQuery(this).css("background-image", "url('')");
+    jQuery(this).wrapAll('<div class="individual-page">');
+
+jQuery('#p1-text-box.hidden').removeClass('hidden');
+
     jQuery('.page').addClass("box-shadow-hide");
-    jQuery('#container').css("position","fixed");
+    jQuery('#container').css("position", "fixed");
 
 
-jQuery('.activated').on('click touchstart', function(element, index) {
-    jQuery(this).removeClass("activated");
-    jQuery('.page').removeClass("box-shadow-hide");
-    jQuery('#container').css("position","absolute");
+
+
+    // jQuery(this).append('<img class="reference-image image-1"/>');
+    // jQuery('img.reference-image').attr('src', 'images/Billboards-1.jpg');
+    // jQuery('img.reference-image').addClass('image-1');
+    // jQuery('img.reference-image').before('<div class="close-image-1"></div>');
+
+    // if ('#p1').hasClass('activated'){
+    //     jQuery(".text-box").load("section-1.txt");    
+    // }
+    // jQuery(this).append('<div class="text-box">');
+
+    // if (jQuery(".activated").is("#p1")) {
+    //     jQuery(".text-box").load("text-files/section-1.txt");
+    // }
+
+
+
+
+
+
+    // To Exit
+    jQuery('.activated').on('click touchstart', function(element, index) {
+        jQuery(this).removeClass("activated");
+        jQuery('.page').removeClass("box-shadow-hide");
+        jQuery('#container').css("position", "absolute");
     });
 
 });
