@@ -29,14 +29,14 @@ function prefixedTransform(el, val) {
 jQuery('.page').on('click touchstart', function(element, index) {
     console.log(this.id);
     jQuery(this).addClass("activated");
-    jQuery('.page').css("box-shadow", "none");
+    jQuery('.page').addClass("box-shadow-hide");
+    jQuery('#container').css("position","fixed");
 
 
-    // jQuery(window).scroll(function() {
-    //     var y = jQuery(this).scrollTop();
-    //     if (y > 200) {
-    //         jQuery(this).removeClass("activated");
-    //     }
-    // });
+jQuery('.activated').on('click touchstart', function(element, index) {
+    jQuery(this).removeClass("activated");
+    jQuery('.page').addClass("box-shadow");
+    jQuery('#container').css("position","absolute");
+    });
 
 });

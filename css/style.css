@@ -105,6 +105,10 @@ body {
     background-size: cover;
 }
 
+.box-shadow-hide{
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+}
+
 .box-shadow{
   box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.3);
 }
