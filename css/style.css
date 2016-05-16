@@ -16,7 +16,7 @@ body {
 }
 
 #iphone-6 {
-    width: 768px;
+    width: 100%;
     height: 100%;
     position: absolute;
     /* top: 50%; */
@@ -25,7 +25,7 @@ body {
 }
 
 #iphone-6 .screen {
-    width: 768px;
+    width: 100%;
     height: 100%;
     position: absolute;
     z-index: 2;
@@ -40,9 +40,9 @@ body {
     overflow-y: scroll;
     overflow-x: hidden;
     position: absolute;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
     right: 0;
     -webkit-perspective: 600px;
     -o-perspective: 600px;
@@ -51,13 +51,13 @@ body {
 }
 
 #container {
-    width: 82%;
-    height: 1024px;
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translate(-50%);
+    /* top: 200px; */
+    /* left: 50%; */
+    /* -webkit-transform: translateX(-50%); */
+    /* transform: translateX(-50%); */
 }
 
 .page {
@@ -68,7 +68,8 @@ body {
     transition: transform .75s ease, top .75s ease;
     transition: transform .75s ease, top .75s ease, -webkit-transform .75s ease;
     -webkit-transform: rotateX(-30deg) translateX(-50%);
-    transform: rotateX(-30deg) translateX(0);
+    left: 50%;
+    transform: rotateX(-30deg) translateX(-50%);
     -webkit-transform-origin: 50% 0%;
     transform-origin: 50% 0%
     -webkit-box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.3);
@@ -84,22 +85,23 @@ body {
     -o-transition: -o-transform .75s ease, top .75s ease;
     -ms-transition: -ms-transform .75s ease, top .75s ease;
     transition: transform .75s ease, top .75s ease;
-    -webkit-transform: scale(0.95) translateY(-50%);
-    -moz-transform: scale(0.95) translateY(-50%);
-    -o-transform: scale(0.95) translateY(-50%);
-    -ms-transform: scale(0.95) translateY(-50%);
-    transform: scale(0.95) translateY(-50%);
+    -webkit-transform: scale(0.9) translate(-50%, -50%);
+    -moz-transform: scale(0.9) translate(-50%, -50%);
+    -o-transform: scale(0.9) translate(-50%, -50%);
+    -ms-transform: scale(0.9) translate(-50%, -50%);
+    transform: scale(0.9) translate(-50%, -50%);
     height: 972px;
     width: 664px;
     transform-origin: center;
     top: 50% !important;
+    left: 50%;
     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
     z-index: 99999999;
     background: white;
     perspective: 100px;
-    margin-top: -80px;
     position: fixed;
     overflow: hidden;
+    margin-top: -105px;
 }
 
 .box-shadow{

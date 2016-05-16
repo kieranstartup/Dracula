@@ -12,7 +12,7 @@ function resizeEvent(e) {
     var h = view.h;
     view.h = window.innerHeight;
     if (h != view.h) {
-        var f = view.h / (877 + 50);
+        var f = 1;
         var str = "scale(" + f + ")"; //"translate(-50%,-50%)" + 
         prefixedTransform(view.el, str);
     }
