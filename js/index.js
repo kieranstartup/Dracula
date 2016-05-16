@@ -35,7 +35,7 @@ jQuery('.page').on('click touchstart', function(element, index) {
 
 jQuery('.activated').on('click touchstart', function(element, index) {
     jQuery(this).removeClass("activated");
-    jQuery('.page').addClass("box-shadow");
+    jQuery('.page').removeClass("box-shadow-hide");
     jQuery('#container').css("position","absolute");
     });
 
