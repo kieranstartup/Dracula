@@ -85,13 +85,13 @@ body {
     -o-transition: -o-transform .75s ease, top .75s ease;
     -ms-transition: -ms-transform .75s ease, top .75s ease;
     transition: transform .75s ease, top .75s ease;
-    -webkit-transform: scale(0.9) translate(-50%, -50%);
-    -moz-transform: scale(0.9) translate(-50%, -50%);
-    -o-transform: scale(0.9) translate(-50%, -50%);
-    -ms-transform: scale(0.9) translate(-50%, -50%);
-    transform: scale(0.9) translate(-50%, -50%);
-    height: 972px;
-    width: 664px;
+    -webkit-transform: scale(1) translate(-50%, -50%);
+    -moz-transform: scale(1) translate(-50%, -50%);
+    -o-transform: scale(1) translate(-50%, -50%);
+    -ms-transform: scale(1) translate(-50%, -50%);
+    transform: scale(1) translate(-50%, -50%);
+    height: 100%;
+    width: 100%;
     transform-origin: center;
     top: 50% !important;
     left: 50%;
@@ -101,7 +101,8 @@ body {
     perspective: 100px;
     position: fixed;
     overflow: hidden;
-    margin-top: -105px;
+    margin-top: 0px;
+    background-size: cover;
 }
 
 .box-shadow{
