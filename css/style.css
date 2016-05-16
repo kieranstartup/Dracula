@@ -1,0 +1,182 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    background-color: white;
+}
+
+* {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#iphone-6 {
+    width: 768px;
+    height: 100%;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    background-color: white;
+}
+
+#iphone-6 .screen {
+    width: 768px;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    overflow: hidden;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* -webkit-transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
+}
+
+#wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0;
+    -webkit-perspective: 600px;
+    -o-perspective: 600px;
+    -ms-perspective: 600px;
+    perspective: 600px;
+}
+
+#container {
+    width: 82%;
+    height: 1024px;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translate(-50%);
+}
+
+.page {
+    height: 972px;
+    width: 664px;
+    position: absolute;
+    transition: top .75s ease, -webkit-transform .75s ease;
+    transition: transform .75s ease, top .75s ease;
+    transition: transform .75s ease, top .75s ease, -webkit-transform .75s ease;
+    -webkit-transform: rotateX(-30deg) translateX(-50%);
+    transform: rotateX(-30deg) translateX(0);
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%
+    -webkit-box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .65));
+    background-size: cover;
+}
+
+.activated {
+    -webkit-transition: -webkit-transform .75s ease, top .75s ease;
+    -moz-transition: -moz-transform .75s ease, top .75s ease;
+    -o-transition: -o-transform .75s ease, top .75s ease;
+    -ms-transition: -ms-transform .75s ease, top .75s ease;
+    transition: transform .75s ease, top .75s ease;
+    -webkit-transform: scale(0.95) translateY(-50%);
+    -moz-transform: scale(0.95) translateY(-50%);
+    -o-transform: scale(0.95) translateY(-50%);
+    -ms-transform: scale(0.95) translateY(-50%);
+    transform: scale(0.95) translateY(-50%);
+    height: 972px;
+    width: 664px;
+    transform-origin: center;
+    top: 50% !important;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    z-index: 99999999;
+    background: white;
+    perspective: 100px;
+    margin-top: -80px;
+    position: fixed;
+    overflow: hidden;
+}
+
+.box-shadow{
+  box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.3);
+}
+
+#p1.page {
+    top: 50px;
+    background-image: url('../img/dracula FINAL-1.jpg');
+}
+
+#p2.page {
+    top: 200px;
+    background-image: url('../img/dracula FINAL-2.jpg');
+}
+
+#p3.page {
+    top: 350px;
+    background-image: url('../img/dracula FINAL-3.jpg');
+}
+
+#p4.page {
+    top: 500px;
+    background-image: url('../img/dracula FINAL-4.jpg');
+}
+
+#p5.page {
+    top: 650px;
+    background-image: url('../img/dracula FINAL-5.jpg');
+}
+
+#p6.page {
+    top: 800px;
+    background-image: url('../img/dracula FINAL-6.jpg');
+}
+
+#p7.page {
+    top: 950px;
+    background-image: url('../img/dracula FINAL-7.jpg');
+}
+
+#p8.page {
+    top: 1100px;
+    background-image: url('../img/dracula FINAL-8.jpg');
+}
+
+#p9.page {
+    top: 1250px;
+    background-image: url('../img/dracula FINAL-9.jpg');
+}
+
+#p10.page {
+    top: 1400px;
+    background-image: url('../img/dracula FINAL-10.jpg');
+}
+
+#p11.page {
+    top: 1550px;
+    background-image: url('../img/dracula FINAL-11.jpg');
+}
+
+#p12.page {
+    top: 1700px;
+    background-image: url('../img/dracula FINAL-12.jpg');
+}
+
+#p13.page {
+    top: 1850px;
+    background-image: url('../img/dracula FINAL-13.jpg');
+}
+
+#p14.page {
+    top: 2000px;
+    background-image: url('../img/dracula FINAL-14.jpg');
+}
+
+#p15.page {
+    top: 2150px;
+    background-image: url('../img/dracula FINAL-15.jpg');
+}
