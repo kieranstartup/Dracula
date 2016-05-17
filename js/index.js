@@ -26,44 +26,38 @@ function prefixedTransform(el, val) {
     el.style.transform = val;
 }
 
-jQuery('.page').on('click', function(element, index) {
-    console.log(this.id);
+jQuery(document.body).on('touchstart', '.page', function() {
+    // jQuery('.page').on('click', function() {
+
+    // Initialise
     jQuery(this).addClass("activated");
-jQuery(this).css("background-image", "url('')");
-    jQuery(this).wrapAll('<div class="individual-page">');
+    jQuery(this).css("background-size", "0");
+    jQuery('#container').addClass("position-fixed");
+    // jQuery('.page').not(this).addClass("box-shadow-hide");
+    jQuery('.page').not(this).hide();
 
-jQuery('#p1-text-box.hidden').removeClass('hidden');
+    // Remove Hidden Class
+    jQuery(this).find('.hidden').removeClass('hidden').addClass('visible');
 
-    jQuery('.page').addClass("box-shadow-hide");
-    jQuery('#container').css("position", "fixed");
+    // jQuery(window).on('scroll' , function() {
+    //     jQuery(".main-text-box").css("display", "inline").hide(500);
+    //     console.log("hello");
+    // });
 
+    // Exiting - Reset All
+    jQuery(document.body).on('touchstart', '.activated', function() {
 
+        jQuery(".main-text-box").hide(2000);
 
+        // jQuery(this).removeClass("activated");
+        // jQuery(this).css("background-size", "cover");
+        // jQuery('#container').removeClass("position-fixed");
+        // // jQuery('.page').not(this).removeClass("box-shadow-hide");
+        // jQuery('.page').not(this).show();
 
-    // jQuery(this).append('<img class="reference-image image-1"/>');
-    // jQuery('img.reference-image').attr('src', 'images/Billboards-1.jpg');
-    // jQuery('img.reference-image').addClass('image-1');
-    // jQuery('img.reference-image').before('<div class="close-image-1"></div>');
+        // // Add Hidden Class
+        // jQuery(this).find('.visible').removeClass('visible').addClass('hidden');
 
-    // if ('#p1').hasClass('activated'){
-    //     jQuery(".text-box").load("section-1.txt");    
-    // }
-    // jQuery(this).append('<div class="text-box">');
-
-    // if (jQuery(".activated").is("#p1")) {
-    //     jQuery(".text-box").load("text-files/section-1.txt");
-    // }
-
-
-
-
-
-
-    // To Exit
-    jQuery('.activated').on('click touchstart', function(element, index) {
-        jQuery(this).removeClass("activated");
-        jQuery('.page').removeClass("box-shadow-hide");
-        jQuery('#container').css("position", "absolute");
     });
 
 });
