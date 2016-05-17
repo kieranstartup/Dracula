@@ -85,8 +85,6 @@ body {
 }
 
 .activated {
-/*    -webkit-transform: .75s ease-in-out;
-*/  
     -webkit-transition: transform .75s ease; 
     transition: transform .75s ease;
     -webkit-transform: rotateX(0deg) translate(-50%, -50%);
