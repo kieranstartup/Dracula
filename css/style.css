@@ -96,12 +96,13 @@ body {
 }
 
 .activated {
-    /*    position: fixed;
-*/
+        position: fixed;
+
     /*    height: 100%;
     width: 100%;*/
     top: 50% !important;
     left: 50%;
+    
     -webkit-transition: transform .75s ease;
     transition: transform .75s ease;
     -webkit-transform: rotateX(0deg) translate3d(-50%, -50%, 0);
