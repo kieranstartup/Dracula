@@ -47,16 +47,16 @@ jQuery(document.body).on('touchstart', '.page', function() {
     // Exiting - Reset All
     jQuery(document.body).on('touchstart', '.activated', function() {
 
-        jQuery(".main-text-box").hide(2000);
+        // jQuery(".main-text-box").hide(2000);
 
-        // jQuery(this).removeClass("activated");
-        // jQuery(this).css("background-size", "cover");
-        // jQuery('#container').removeClass("position-fixed");
-        // // jQuery('.page').not(this).removeClass("box-shadow-hide");
-        // jQuery('.page').not(this).show();
+        jQuery(this).removeClass("activated");
+        jQuery(this).css("background-size", "cover");
+        jQuery('#container').removeClass("position-fixed");
+        // jQuery('.page').not(this).removeClass("box-shadow-hide");
+        jQuery('.page').not(this).show();
 
-        // // Add Hidden Class
-        // jQuery(this).find('.visible').removeClass('visible').addClass('hidden');
+        // Add Hidden Class
+        jQuery(this).find('.visible').removeClass('visible').addClass('hidden');
 
     });
 
