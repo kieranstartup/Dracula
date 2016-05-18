@@ -10,10 +10,11 @@ body {
     background-color: white;
 }
 
-* {
+
+/** {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
-}
+}*/
 
 #iphone-6 {
     width: 100%;
@@ -81,8 +82,10 @@ body {
 
 .page {
     position: absolute;
-    height: 972px;
-    width: 664px;
+    /*    height: 767px;
+    width: 524px;*/
+    height: 837px;
+    width: 584px;
     left: 50%;
     -webkit-transition: transform .75s ease;
     transition: transform .75s ease;
@@ -96,13 +99,11 @@ body {
 }
 
 .activated {
-        position: fixed;
-
+    position: fixed;
     /*    height: 100%;
     width: 100%;*/
     top: 50% !important;
     left: 50%;
-    
     -webkit-transition: transform .75s ease;
     transition: transform .75s ease;
     -webkit-transform: rotateX(0deg) translate3d(-50%, -50%, 0);
@@ -148,77 +149,92 @@ top: 0 !important;*/
 
 #p1.page {
     top: 50px;
-    background-image: url('../img/dracula FINAL-1.jpg');
+    /*background-image: url('../img/dracula FINAL-1.jpg');*/
+    background-color: white;
 }
 
 #p2.page {
     top: 200px;
-    background-image: url('../img/dracula FINAL-2.jpg');
+    /*background-image: url('../img/dracula FINAL-2.jpg');*/
+    background-color: white;
 }
 
 #p3.page {
     top: 350px;
-    background-image: url('../img/dracula FINAL-3.jpg');
+    /*background-image: url('../img/dracula FINAL-3.jpg');*/
+    background-color: white;
 }
 
 #p4.page {
     top: 500px;
-    background-image: url('../img/dracula FINAL-4.jpg');
+    /*background-image: url('../img/dracula FINAL-4.jpg');*/
+    background-color: white;
 }
 
 #p5.page {
     top: 650px;
-    background-image: url('../img/dracula FINAL-5.jpg');
+    /*background-image: url('../img/dracula FINAL-5.jpg');*/
+    background-color: white;
 }
 
 #p6.page {
     top: 800px;
-    background-image: url('../img/dracula FINAL-6.jpg');
+    /*background-image: url('../img/dracula FINAL-6.jpg');*/
+    background-color: white;
 }
 
 #p7.page {
     top: 950px;
-    background-image: url('../img/dracula FINAL-7.jpg');
+    /*background-image: url('../img/dracula FINAL-7.jpg');*/
+    background-color: white;
 }
 
 #p8.page {
     top: 1100px;
-    background-image: url('../img/dracula FINAL-8.jpg');
+    /*background-image: url('../img/dracula FINAL-8.jpg');*/
+    background-color: white;
 }
 
 #p9.page {
     top: 1250px;
-    background-image: url('../img/dracula FINAL-9.jpg');
+    /*background-image: url('../img/dracula FINAL-9.jpg');*/
+    background-color: white;
 }
 
 #p10.page {
     top: 1400px;
-    background-image: url('../img/dracula FINAL-10.jpg');
+    /*background-image: url('../img/dracula FINAL-10.jpg')*/
+    background-color: white;
 }
 
 #p11.page {
     top: 1550px;
-    background-image: url('../img/dracula FINAL-11.jpg');
+    /*background-image: url('../img/dracula FINAL-11.jpg')*/
+    background-color: white;
 }
 
 #p12.page {
     top: 1700px;
-    background-image: url('../img/dracula FINAL-12.jpg');
+    /*background-image: url('../img/dracula FINAL-12.jpg')*/
+    background-color: white;
 }
 
 #p13.page {
     top: 1850px;
-    background-image: url('../img/dracula FINAL-13.jpg');
+    /*background-image: url('../img/dracula FINAL-13.jpg')*/
+    background-color: white;
 }
 
 #p14.page {
     top: 2000px;
-    background-image: url('../img/dracula FINAL-14.jpg');
+    /*background-image: url('../img/dracula FINAL-14.jpg')*/
+    background-color: white;
 }
 
 #p15.page {
     top: 2150px;
-    background-image: url('../img/dracula FINAL-15.jpg');
+    /*background-image: url('../img/dracula FINAL-15.jpg')*/
+    background-color: white;
 }
 
 
@@ -230,19 +246,15 @@ top: 0 !important;*/
 
 /* ==================================================== */
 
-span {
-    margin-left: 40px;
-}
-
 .large-text {
-    font-size: 60px;
+    font-size: 42px;
     text-align: center;
     margin-top: 200px;
     letter-spacing: 1px;
 }
 
 .medium-text {
-    font-size: 27px;
+    font-size: 18px;
 }
 
 #author {
@@ -260,27 +272,104 @@ span {
 .title {
     text-align: center;
     font-style: italic;
-    margin-top: 11px;
+    margin-top: 12px;
 }
 
 .page-number {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 70px;
     font-weight: 900;
+    font-size: 12px;
 }
 
 .main-text-box {
+    margin-top: 54px;
     white-space: pre-line;
-    width: 519px;
+/*    width: 327px;
+*/
+    width: 345px;
     position: absolute;
     text-align: justify;
-    font-size: 17px;
-    line-height: 23px;
-    letter-spacing: 0.1px;
-    word-spacing: 0.3px;
+    font-size: 11.5px;
+    line-height: 17px;
+    letter-spacing: 0;
+    word-spacing: 0px;
     left: 50%;
     -webkit-transition: transform .75s ease;
     transition: transform .75s ease;
     -webkit-transform: translate3d(-50%, 0, 0);
     transform: translate3d(-50%, 0, 0);
 }
+
+.new-paragraph{
+    margin-left: 26px;
+}
+
+span.italic {
+    font-style: italic;
+}
+
+span.italic.tweaked {
+    letter-spacing: -0.1px;
+    word-spacing: 0px;
+}
+
+p.broken {
+    margin: 0;
+    text-align: justify;
+    text-align-last: justify;
+        word-spacing: 0.5px;
+    letter-spacing: 0.1px;
+}
+
+p.broken.tweaked {
+    margin: 0;
+    text-align: justify;
+    text-align-last: justify;
+    word-spacing: 0.2px;
+    letter-spacing: 0.1px;
+}
+p.broken.tweaked-more {
+    margin: 0;
+    text-align: justify;
+    text-align-last: justify;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+}
+
+p.broken.alternate {
+    margin: 0;
+    text-align: justify;
+    text-align-last: justify;
+    word-spacing: 0px;
+    letter-spacing: -0.1px;
+}
+
+p.broken.alternate-more {
+    margin: 0;
+    text-align: justify;
+    text-align-last: justify;
+    word-spacing: 0px;
+    letter-spacing: -0.3px;
+}
+p.broken.tweak-word-spacing{
+    margin: 0;
+    text-align: justify;
+    text-align-last: justify;
+    word-spacing: -0.1px;
+    letter-spacing: 0px;
+}
+p.broken.letter-word-spacing{
+    margin: 0;
+    text-align: justify;
+    text-align-last: justify;
+    word-spacing: -0.1px;
+    letter-spacing: 0px;
+}
+
+
+#p6-text-box > div.main-text-box > p,
+#p9-text-box > div.main-text-box > p {
+    margin-bottom: -18px;
+}
+

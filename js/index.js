@@ -12,9 +12,9 @@ function resizeEvent(e) {
     var h = view.h;
     view.h = window.innerHeight;
     if (h != view.h) {
-        var f = 1;
-        var str = "scale(" + f + ")"; //"translate(-50%,-50%)" + 
-        prefixedTransform(view.el, str);
+        // var f = 1;
+        // var str = "scale(" + f + ")"; //"translate(-50%,-50%)" + 
+        // prefixedTransform(view.el, str);
     }
 }
 
@@ -26,7 +26,7 @@ function prefixedTransform(el, val) {
     el.style.transform = val;
 }
 
-jQuery(document.body).on('click', '.page', function() {
+jQuery(document.body).on('touchstart', '.page', function() {
     // jQuery('.page').on('click', function() {
 
     // Initialise
@@ -45,7 +45,7 @@ jQuery(document.body).on('click', '.page', function() {
     // });
 
     // Exiting - Reset All
-    jQuery(document.body).on('click', '.activated', function() {
+    jQuery(document.body).on('touchstart', '.activated', function() {
 
         // jQuery(".main-text-box").hide(2000);
 
