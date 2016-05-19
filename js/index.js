@@ -26,7 +26,7 @@ function prefixedTransform(el, val) {
     el.style.transform = val;
 }
 
-jQuery(document.body).on('touchstart', '.page', function() {
+jQuery(document.body).on('touchstart', '.page', function() { //Change to Touchstart
     // jQuery('.page').on('click', function() {
 
     // Initialise
@@ -45,7 +45,7 @@ jQuery(document.body).on('touchstart', '.page', function() {
     // });
 
     // Exiting - Reset All
-    jQuery(document.body).on('touchstart', '.activated', function() {
+    jQuery(document.body).on('touchstart', '.activated', function() { //Change to Touchstart
 
         // jQuery(".main-text-box").hide(2000);
 

@@ -10,6 +10,15 @@ body {
     background-color: white;
 }
 
+* {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    font-weight: normal;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
 /** {
     -webkit-transform-style: preserve-3d;
@@ -301,8 +310,18 @@ top: 0 !important;*/
     transform: translate3d(-50%, 0, 0);
 }
 
+span.new-paragraph-first-chapter {
+    margin-left: 0;
+}
+
 .new-paragraph{
     margin-left: 26px;
+}
+
+span.drop-cap {
+    font-size: 40px;
+    padding-top: 8px;
+    float: left;
 }
 
 span.italic {
