@@ -26,26 +26,27 @@ function prefixedTransform(el, val) {
     el.style.transform = val;
 }
 
-jQuery(document.body).on('touchstart', '.page', function() { //Change to Touchstart
+jQuery(document.body).on('click', '.page', function() { //Change to touchstart
     // jQuery('.page').on('click', function() {
 
     // Initialise
     jQuery(this).addClass("activated");
     jQuery(this).css("background-size", "0");
     jQuery('#container').addClass("position-fixed");
-    // jQuery('.page').not(this).addClass("box-shadow-hide");
     jQuery('.page').not(this).hide();
-
     // Remove Hidden Class
     jQuery(this).find('.hidden').removeClass('hidden').addClass('visible');
+    jQuery(this , '.p').wrap(".page-container");
 
-    // jQuery(window).on('scroll' , function() {
-    //     jQuery(".main-text-box").css("display", "inline").hide(500);
-    //     console.log("hello");
-    // });
+
+
+
+
+var scrollTop = jQuery(window).scrollTop();
+console.log(scrollTop);
 
     // Exiting - Reset All
-    jQuery(document.body).on('touchstart', '.activated', function() { //Change to Touchstart
+    jQuery(document.body).on('click', '.activated', function() { //Change to Touchstart
 
         // jQuery(".main-text-box").hide(2000);
 
