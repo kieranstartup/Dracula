@@ -59,12 +59,12 @@ function enableScroll() {
     document.onkeydown = null;
 }
 
-jQuery.fn.center = function() {
-    this.css("position", "absolute");
-    this.css("margin-top", Math.max((0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop()) / 2) + "px");
-    // this.css("margin-left", Math.max(0, ((jQuery(window).width() - jQuery(this).outerWidth()) / 2) + jQuery(window).scrollLeft()) + "px");
-    return this;
-};
+// jQuery.fn.center = function() {
+//     this.css("position", "absolute");
+//     this.css("margin-top", Math.max((0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop()) + "px");
+//     // this.css("margin-left", Math.max(0, ((jQuery(window).width() - jQuery(this).outerWidth()) / 2) + jQuery(window).scrollLeft()) + "px");
+//     return this;
+// };
 
 jQuery('.page-container').hide();
 
@@ -101,6 +101,7 @@ jQuery(document.body).on('touchstart', '.page', function() { //Change to touchst
 
     // Initialise & Random Number
     jQuery(this).addClass("activated").addClass('scaled-' + randomNumber);
+    // .addClass("activated")
     // jQuery(".page-container").css('top', '99999').append(this);
 
 
@@ -110,7 +111,7 @@ jQuery(document.body).on('touchstart', '.page', function() { //Change to touchst
     // jQuery(".page-container").css('z-index' , '99999');
 
 
-    jQuery('.page-container').show();
+    // jQuery('.page-container').show();
 
 
 
