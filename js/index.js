@@ -11,11 +11,7 @@ window.addEventListener("load", function(e) {
 function resizeEvent(e) {
     var h = view.h;
     view.h = window.innerHeight;
-    if (h != view.h) {
-        // var f = 1;
-        // var str = "scale(" + f + ")"; //"translate(-50%,-50%)" + 
-        // prefixedTransform(view.el, str);
-    }
+    if (h != view.h) {}
 }
 
 function prefixedTransform(el, val) {
@@ -26,38 +22,77 @@ function prefixedTransform(el, val) {
     el.style.transform = val;
 }
 
-jQuery(document.body).on('click', '.page', function() { //Change to touchstart
-    // jQuery('.page').on('click', function() {
+// left: 37, up: 38, right: 39, down: 40,
+    // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+    var keys = { 37: 1, 38: 1, 39: 1, 40: 1 };
 
-    // Initialise
-    jQuery(this).addClass("activated");
-    jQuery(this).css("background-size", "0");
-    jQuery('#container').addClass("position-fixed");
-    jQuery('.page').not(this).hide();
+    function preventDefault(e) {
+        e = e || window.event;
+        if (e.preventDefault)
+            e.preventDefault();
+        e.returnValue = false;
+    }
+
+    function preventDefaultForScrollKeys(e) {
+        if (keys[e.keyCode]) {
+            preventDefault(e);
+            return false;
+        }
+    }
+
+    function disableScroll() {
+        if (window.addEventListener) // older FF
+            window.addEventListener('DOMMouseScroll', preventDefault, false);
+        window.onwheel = preventDefault; // modern standard
+        window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+        // window.ontouchmove = preventDefault; // mobile - this prevents all scrolling - we only need to stop vertical scrolling
+        document.onkeydown = preventDefaultForScrollKeys;
+    }
+
+
+    function enableScroll() {
+        if (window.removeEventListener)
+            window.removeEventListener('DOMMouseScroll', preventDefault, false);
+        window.onmousewheel = document.onmousewheel = null;
+        window.onwheel = null;
+        window.ontouchmove = null;
+        document.onkeydown = null;
+    }
+
+
+
+jQuery(document.body).on('touchstart', '.page', function() { //Change to touchstart
+
+    var randomClass = 3;
+    var randomNumber = Math.round(Math.random() * (randomClass - 1)) + 1;
+
+    // Initialise & Random Number
+        jQuery(this).addClass("activated").addClass('scaled-' + randomNumber);
+    jQuery(this, '.page').wrapAll('<div class="page-container">');
+
+
     // Remove Hidden Class
-    jQuery(this).find('.hidden').removeClass('hidden').addClass('visible');
-    jQuery(this , '.p').wrap(".page-container");
+    // jQuery(this).find('.hidden').removeClass('hidden').addClass('visible');
 
+    var offset = jQuery(this).offset().top;
+    var actualOffset = offset + 64;
+    console.log("offset equals " + offset);
+    console.log("calculated offset equals " + actualOffset);
+    // jQuery(this).css('top' , actualOffset);
+        disableScroll();
 
-
-
-
-var scrollTop = jQuery(window).scrollTop();
-console.log(scrollTop);
 
     // Exiting - Reset All
-    jQuery(document.body).on('click', '.activated', function() { //Change to Touchstart
+    jQuery(document.body).on('touchstart', '.activated', function() { //Change to Touchstart
+        enableScroll();
 
-        // jQuery(".main-text-box").hide(2000);
-
-        jQuery(this).removeClass("activated");
-        jQuery(this).css("background-size", "cover");
-        jQuery('#container').removeClass("position-fixed");
-        // jQuery('.page').not(this).removeClass("box-shadow-hide");
-        jQuery('.page').not(this).show();
+        // Remove Activated Class & Random Number
+        jQuery(this).removeClass("activated scaled-1 scaled-2 scaled-3");
+        // jQuery('.page').not(this).show();
+        // jQuery(this, '.page').unwrap();
 
         // Add Hidden Class
-        jQuery(this).find('.visible').removeClass('visible').addClass('hidden');
+        // jQuery(this).find('.visible').removeClass('visible').addClass('hidden');
 
     });
 
