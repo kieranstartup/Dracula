@@ -59,25 +59,54 @@ function enableScroll() {
     document.onkeydown = null;
 }
 
-// jQuery.fn.center = function() {
-//     this.css("position", "absolute");
-//     this.css("margin-top", Math.max((0, ((jQuery(window).height() - jQuery(this).outerHeight()) / 2) + jQuery(window).scrollTop()) + "px");
-//     // this.css("margin-left", Math.max(0, ((jQuery(window).width() - jQuery(this).outerWidth()) / 2) + jQuery(window).scrollLeft()) + "px");
-//     return this;
+
+
+
+// jQuery.fn.center = function () {
+//             var top = Math.max(jQuery(window).height() / 2 - jQuery(this)[0].offsetHeight / 2, 0);
+//             var left = Math.max(jQuery(window).width() / 2 - jQuery(this)[0].offsetWidth / 2, 0);
+//             console.log(top);
+//             console.log(left);
+//             jQuery(this).css('top', top + "px");
+//             jQuery(this).css('left', left + "px");
+//             jQuery(this).css('position', 'absolute');
 // };
 
-jQuery('.page-container').hide();
-
-// var scrollPosition;
-
-// jQuery('#wrapper').bind("scroll", function() {
-//     if (jQuery('#wrapper').scrollTop()) {
-//         scrollPosition = jQuery('#wrapper').scrollTop();
-//         console.log(jQuery('#wrapper').scrollTop());
+// Helper function to get an element's exact position
+// function getPosition(el) {
+//   var xPos = 0;
+//   var yPos = 0;
+ 
+//   while (el) {
+//     if (el.tagName == "BODY") {
+//       // deal with browser quirks with body/window/document and page scroll
+//       var xScroll = el.scrollLeft || document.documentElement.scrollLeft;
+//       var yScroll = el.scrollTop || document.documentElement.scrollTop;
+ 
+//       xPos += (el.offsetLeft - xScroll + el.clientLeft);
+//       yPos += (el.offsetTop - yScroll + el.clientTop);
 //     } else {
-//         console.log(jQuery('#wrapper').scrollTop());
+//       // for all other non-BODY elements
+//       xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+//       yPos += (el.offsetTop - el.scrollTop + el.clientTop);
 //     }
-// });
+ 
+//     el = el.offsetParent;
+//   }
+//   return {
+//     x: xPos,
+//     y: yPos
+//   };
+// }
+ 
+// // deal with the page getting resized or scrolled
+// window.addEventListener("scroll", updatePosition, false);
+// window.addEventListener("resize", updatePosition, false);
+ 
+// function updatePosition() {
+//   // add your code to update the position when your browser
+//   // is resized or scrolled
+// }
 
 
 
@@ -86,45 +115,23 @@ jQuery('.page-container').hide();
 
 
 
+jQuery('.page-container').hide();
 
 jQuery(document.body).on('touchstart', '.page', function() { //Change to touchstart
 
     var randomClass = 3;
     var randomNumber = Math.round(Math.random() * (randomClass - 1)) + 1;
 
-
-
-
-
-
-
-
     // Initialise & Random Number
     jQuery(this).addClass("activated").addClass('scaled-' + randomNumber);
-    // .addClass("activated")
-    // jQuery(".page-container").css('top', '99999').append(this);
-
-
-    // jQuery(this).center(true);
-
-    // jQuery(".page-container").css('top' , scrollPosition);
-    // jQuery(".page-container").css('z-index' , '99999');
-
-
-    // jQuery('.page-container').show();
+// jQuery(this).center();
 
 
 
+// var myElement = jQuery(this);
+// var position = getPosition(myElement);
+// console.log("The image is located at: " + position.x + ", " + position.y);
 
-    // Remove Hidden Class
-    // jQuery(this).find('.hidden').removeClass('hidden').addClass('visible');
-
-    // var offset = jQuery(this).offset().top;
-    // var actualOffset = offset + 64;
-    // console.log("offset equals " + offset);
-    // console.log("calculated offset equals " + actualOffset);
-    // jQuery(this).css('top' , actualOffset);
-    // disableScroll();
 
 
     // Exiting - Reset All
@@ -132,15 +139,6 @@ jQuery(document.body).on('touchstart', '.page', function() { //Change to touchst
         enableScroll();
 
         // Remove Activated Class & Random Number
-        // jQuery(this).css('z-index' , '0');
-        // jQuery(this).prepend("#p5");
-        //.unwrap(".page-container") 
-        // jQuery(this).parent().prepend(jQuery(this));
-
-
-        // jQuery(this).parent().find(jQuery(this).next()).before(jQuery(this));
-
-
         jQuery(this).removeClass("activated scaled-1 scaled-2 scaled-3");
         // jQuery('.page').not(this).show();
         // jQuery(this, '.page').unwrap();
