@@ -48,7 +48,7 @@ body {
     -ms-transform-origin: 50% 0;
         transform-origin: 50% 0;
     
-    box-shadow: 0px -10px 50px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -10px 50px 0 rgba(0, 0, 0, 0.3);
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .55));
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .55));
 }
@@ -70,30 +70,31 @@ body {
     z-index: 999999;
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
 }
 
 
 /* Small */
 
 .scaled-1 {
-    -webkit-transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 0.8);
-    transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 0) scale3d(0.8, 0.8, 0.8);
+    -webkit-transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 27px) scale3d(0.75, 0.75, 0.75);
+    transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 27px) scale3d(0.75, 0.75, 0.75);
 }
 
 
 /* Medium */
 
 .scaled-2 {
-    -webkit-transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 0) scale3d(0.9, 0.9, 0.9);
-    transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 0) scale3d(0.9, 0.9, 0.9);
+    -webkit-transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 27px) scale3d(0.85, 0.85, 0.85);
+    transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 27px) scale3d(0.85, 0.85, 0.85);
 }
 
 
 /* Normal */
 
 .scaled-3 {
-    -webkit-transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
-    transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+    -webkit-transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 27px) scale3d(0.9, 0.9, 0.9);
+    transform: rotate3d(0, 0, 0, 0deg) translate3d(-50%, -50%, 27px) scale3d(0.9, 0.9, 0.9);
 }
 
 #p1.page {
@@ -211,7 +212,7 @@ body {
     font-size: 11.5px;
     line-height: 17px;
     letter-spacing: 0;
-    word-spacing: 0px;
+    word-spacing: 0;
     left: 50%;
     
     -webkit-transition: -webkit-transform .75s ease, -webkit-transform .75s ease;
@@ -241,7 +242,7 @@ span.italic {
 
 span.italic.tweaked {
     letter-spacing: -0.1px;
-    word-spacing: 0px;
+    word-spacing: 0;
 }
 
 p.broken {
@@ -267,8 +268,8 @@ p.broken.tweaked-more {
     text-align: justify;
     -moz-text-align-last: justify;
     text-align-last: justify;
-    word-spacing: 0px;
-    letter-spacing: 0px;
+    word-spacing: 0;
+    letter-spacing: 0;
 }
 
 p.broken.alternate {
@@ -276,7 +277,7 @@ p.broken.alternate {
     text-align: justify;
     -moz-text-align-last: justify;
     text-align-last: justify;
-    word-spacing: 0px;
+    word-spacing: 0;
     letter-spacing: -0.1px;
 }
 
@@ -285,7 +286,7 @@ p.broken.alternate-more {
     text-align: justify;
     -moz-text-align-last: justify;
     text-align-last: justify;
-    word-spacing: 0px;
+    word-spacing: 0;
     letter-spacing: -0.3px;
 }
 
@@ -295,7 +296,7 @@ p.broken.tweak-word-spacing {
     -moz-text-align-last: justify;
     text-align-last: justify;
     word-spacing: -0.1px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 p.broken.letter-word-spacing {
@@ -304,7 +305,7 @@ p.broken.letter-word-spacing {
     -moz-text-align-last: justify;
     text-align-last: justify;
     word-spacing: -0.1px;
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
 
 #p6-text-box > div.main-text-box > p,

@@ -1,8 +1,5 @@
 jQuery(document).ready(function() {
     jQuery(document.body).on('touchstart', '.page', function() { //Change to touchstart
-        // Disable Scrolling
-        disableScroll();
-
         // Generate number between 1 & 3
         var randomClass = 3;
         var randomNumber = Math.round(Math.random() * (randomClass - 1)) + 1;
