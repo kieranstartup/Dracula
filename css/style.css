@@ -16,6 +16,7 @@ body {
     text-rendering: optimizeLegibility !important;
     -webkit-font-smoothing: antialiased !important;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
 }
 
 
@@ -281,6 +282,15 @@ p.broken.alternate {
     letter-spacing: -0.1px;
 }
 
+p.broken.alternate-middle {
+    margin: 0;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+    word-spacing: -0.1px;
+letter-spacing: -0.2px;
+}
+
 p.broken.alternate-more {
     margin: 0;
     text-align: justify;
@@ -308,7 +318,68 @@ p.broken.letter-word-spacing {
     letter-spacing: 0;
 }
 
+
+p.extreme-letter-word-spacing {
+    margin: 0;
+    text-align: justify;
+    -moz-text-align-last: justify;
+    text-align-last: justify;
+    word-spacing: -0.863px;
+    letter-spacing: 0;
+}
+p.alternate-again{
+margin: 0;
+text-align: justify;
+-moz-text-align-last: justify;
+text-align-last: justify;
+word-spacing: -0.38px;
+letter-spacing: -0.1px;
+}
+span.last-line-alternate{
+margin: 0;
+text-align: justify;
+-moz-text-align-last: justify;
+text-align-last: justify;
+letter-spacing: -0.4px;
+}
+span.last-line-alternate-extreme{
+margin: 0;
+text-align: justify;
+-moz-text-align-last: justify;
+text-align-last: justify;
+letter-spacing: -0.6px;
+}
+span.last-line-alternate-middle{
+margin: 0;
+text-align: justify;
+-moz-text-align-last: justify;
+text-align-last: justify;
+letter-spacing: -0.3px;
+}
+span.last-line{
+    letter-spacing: -0.2px;
+}
+p.broken.letter-word-spacing-alternative{
+margin: 0;
+text-align: justify;
+-moz-text-align-last: justify;
+text-align-last: justify;
+word-spacing: -0.2px;
+letter-spacing: -0.2px;
+}
+
+p.broken.letter-word-spacing-last-page{
+margin: 0;
+text-align: justify;
+-moz-text-align-last: justify;
+text-align-last: justify;
+word-spacing: -0.2px;
+letter-spacing: -0.1px;
+}
+
+
 #p6-text-box > div.main-text-box > p,
-#p9-text-box > div.main-text-box > p {
+#p9-text-box > div.main-text-box > p,
+#p8-text-box > div.main-text-box > p.broken.alternate {
     margin-bottom: -18px;
 }
