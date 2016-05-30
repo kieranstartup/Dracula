@@ -377,6 +377,19 @@ word-spacing: -0.2px;
 letter-spacing: -0.1px;
 }
 
+.and-more{
+letter-spacing: 0.5px !important;
+word-spacing: 0.8px !important;
+}
+
+.another-one{
+    word-spacing: -0.9px !important;
+letter-spacing: 0px !important;
+}
+.and-again{
+letter-spacing: 0.2px !important;
+word-spacing: 0.4px !important;
+}
 
 #p6-text-box > div.main-text-box > p,
 #p9-text-box > div.main-text-box > p,
